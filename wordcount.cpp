@@ -13,7 +13,7 @@
  * #hours:
  * Vagan: 2
  * Areesha:2
- * Jedidah:
+ * Jedidah: 2
  * Haresh:2
  */
 

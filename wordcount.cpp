@@ -34,4 +34,19 @@ int main()
    else
      break;
  }
+
+ //getCharacters
+ int chars;
+ for (int i = 0; i < s.size(); i++)
+ {
+  chars += (int) (s[i].length());
+ }
+
+ //getLines
+ int lines;
+ lines = s.size();
+
+ //get Characters "fix" for \n
+ chars += lines;
+
 }

@@ -12,7 +12,7 @@
  * Finally, please indicate approximately how many hours you spent on this:
  * #hours:
  * Vagan: 2
- * Areesha:
+ * Areesha:2
  * Jedidah:
  * Haresh:
  */
@@ -63,4 +63,36 @@ int main()
  uniqueLineVector.push_back(s[i]);
  }
  uniqueLines = uniqueLineVector.size();
+
+ vector <string> wordVector;
+ int words = 0;
+ for(int i = 0; i < s.size(); i++)
+ {
+  string cLine;
+  string cWord;
+  for(int j = 0; j < s[i].length(); j++)
+  {
+   cLine = s[i];
+   if(cLine[j] == ' ')
+   {
+    if(cWord != "" && cWord != " ")
+    {
+    wordVector.push_back(cWord);
+    words++;
+    cWord = "";
+    }
+   }
+   else
+   {
+    cWord += cLine[j];
+   }
+  }
+  if(cWord != "" && cWord != " ")
+  {
+   wordVector.push_back(cWord);
+   words++;
+   cWord = "";
+  }
+ }
 }
+

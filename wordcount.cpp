@@ -14,7 +14,7 @@
  * Vagan: 2
  * Areesha:2
  * Jedidah:
- * Haresh:
+ * Haresh:2
  */
 
 #include <iostream>
@@ -94,5 +94,21 @@ int main()
    cWord = "";
   }
  }
-}
 
+ int uniqueWords;
+ vector <string> uniqueWordVector;
+ for(int i = 0; i < words; i++)
+ {
+  bool passed = true;
+  for(int j = 0; j < uniqueWordVector.size(); j++)
+  {
+   if(wordVector[i].compare(uniqueWordVector[j]) == 0)
+  passed = false;
+  }
+  if(passed)
+   uniqueWordVector.push_back(wordVector[i]);
+ }
+ uniqueWords = uniqueWordVector.size();
+
+ cout << lines << " " << words << " " << chars << " " << uniqueLines << " " << uniqueWords << endl;
+}

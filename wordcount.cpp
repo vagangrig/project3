@@ -73,7 +73,7 @@ int main()
   for(int j = 0; j < s[i].length(); j++)
   {
    cLine = s[i];
-   if(cLine[j] == ' ')
+   if(cLine[j] == ' ' || cLine[j] == '\t')
    {
     if(cWord != "" && cWord != " ")
     {

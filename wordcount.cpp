@@ -11,7 +11,7 @@
  * https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html
  * Finally, please indicate approximately how many hours you spent on this:
  * #hours:
- * Vagan:
+ * Vagan: 2
  * Areesha:
  * Jedidah:
  * Haresh:
@@ -49,4 +49,18 @@ int main()
  //get Characters "fix" for \n
  chars += lines;
 
+ int uniqueLines;
+ vector <string> uniqueLineVector;
+ for(int i = 0; i < lines; i++)
+ {
+  bool passed = true;
+  for(int j = 0; j < uniqueLineVector.size(); j++)
+  {
+   if(s[i].compare(uniqueLineVector[j]) == 0)
+   passed = false;
+  }
+ if(passed)
+ uniqueLineVector.push_back(s[i]);
+ }
+ uniqueLines = uniqueLineVector.size();
 }
